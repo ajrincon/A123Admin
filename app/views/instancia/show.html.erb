@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @instancium.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @instancium.descripcion %>
+</p>
+
+<p>
+  <strong>Ciudad:</strong>
+  <%= @instancium.ciudad %>
+</p>
+
+<p>
+  <strong>Departamento:</strong>
+  <%= @instancium.departamento %>
+</p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @instancium.pais %>
+</p>
+
+<p>
+  <strong>Server key:</strong>
+  <%= @instancium.server_key %>
+</p>
+
+<p>
+  <strong>Url app:</strong>
+  <%= @instancium.url_app %>
+</p>
+
+<%= link_to 'Edit', edit_instancium_path(@instancium) %> |
+<%= link_to 'Back', instancia_path %>

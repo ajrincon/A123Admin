@@ -1,0 +1,39 @@
+<h1>Listing instancia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Ciudad</th>
+      <th>Departamento</th>
+      <th>Pais</th>
+      <th>Server key</th>
+      <th>Url app</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @instancia.each do |instancium| %>
+      <tr>
+        <td><%= instancium.nombre %></td>
+        <td><%= instancium.descripcion %></td>
+        <td><%= instancium.ciudad %></td>
+        <td><%= instancium.departamento %></td>
+        <td><%= instancium.pais %></td>
+        <td><%= instancium.server_key %></td>
+        <td><%= instancium.url_app %></td>
+        <td><%= link_to 'Show', instancium %></td>
+        <td><%= link_to 'Edit', edit_instancium_path(instancium) %></td>
+        <td><%= link_to 'Destroy', instancium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Instancium', new_instancium_path %>

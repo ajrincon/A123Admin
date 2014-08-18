@@ -1,0 +1,21 @@
+<%= form_for(@dispositivo) do |f| %>
+  <% if @dispositivo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dispositivo.errors.count, "error") %> prohibited this dispositivo from being saved:</h2>
+
+      <ul>
+      <% @dispositivo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :registration_id %><br>
+    <%= f.text_field :registration_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

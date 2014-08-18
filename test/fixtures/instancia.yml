@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  descripcion: MyText
+  ciudad: 1
+  departamento: 1
+  pais: 1
+  server_key: MyString
+  url_app: MyString
+
+two:
+  nombre: MyString
+  descripcion: MyText
+  ciudad: 1
+  departamento: 1
+  pais: 1
+  server_key: MyString
+  url_app: MyString

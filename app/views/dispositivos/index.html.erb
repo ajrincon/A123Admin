@@ -1,0 +1,27 @@
+<h1>Listing dispositivos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Registration</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dispositivos.each do |dispositivo| %>
+      <tr>
+        <td><%= dispositivo.registration_id %></td>
+        <td><%= link_to 'Show', dispositivo %></td>
+        <td><%= link_to 'Edit', edit_dispositivo_path(dispositivo) %></td>
+        <td><%= link_to 'Destroy', dispositivo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dispositivo', new_dispositivo_path %>

@@ -1,0 +1,45 @@
+<%= form_for(@instancium) do |f| %>
+  <% if @instancium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@instancium.errors.count, "error") %> prohibited this instancium from being saved:</h2>
+
+      <ul>
+      <% @instancium.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :ciudad %><br>
+    <%= f.number_field :ciudad %>
+  </div>
+  <div class="field">
+    <%= f.label :departamento %><br>
+    <%= f.number_field :departamento %>
+  </div>
+  <div class="field">
+    <%= f.label :pais %><br>
+    <%= f.number_field :pais %>
+  </div>
+  <div class="field">
+    <%= f.label :server_key %><br>
+    <%= f.text_field :server_key %>
+  </div>
+  <div class="field">
+    <%= f.label :url_app %><br>
+    <%= f.text_field :url_app %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
